@@ -1,0 +1,9 @@
+<h1>{{ msg | titlecase }}</h1>
+<form #myForm="ngForm" (ngSubmit)="loging(title)">
+  <input
+    type="text"
+    [(ngModel)]="title"
+    [ngModelOptions]="{ standalone: true }"
+  />
+  <input [disabled]="!myForm.valid" type="submit" (click)="changeMsg()" />
+</form>
